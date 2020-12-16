@@ -1,0 +1,85 @@
+
+header
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:auto;
+}
+
+.LeftBarre
+{
+    width:50%;
+    margin-top:2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.MenuLeft
+{
+    width:70%;
+}
+.Contact
+{
+    font-size: 0.8rem;
+    margin-right:19rem;
+    color:#5b6370;
+}
+.Contact ul, .Menu ul, .SocialLink ul
+{
+    list-style: none;
+    display: inline-flex;
+    height:auto;
+}
+.Contact li, .Menu li
+{
+    padding:1rem;
+}
+
+.Menu
+{
+    width:100%;
+    background-color: #393e46;
+    color:#f1f1f1;
+    font-size: 0.8rem;
+}
+
+.MeTitle
+{
+    padding-bottom: 0.3rem;
+}
+
+.SocialLink
+{
+    width:30%;
+    height:60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.SocialLink ul
+{
+    height:100%;
+}
+.SocialLink li
+{
+    width:auto;
+    padding:0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ImgSocialLink
+{
+    width:35px;
+}
+
+.ImgSocialLink:hover
+{
+    cursor:pointer;
+}
