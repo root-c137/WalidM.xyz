@@ -1,85 +1,85 @@
 
 header
 {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+}
+.HeaderBarre
+{
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin:auto;
+    color:#f4f4f2;
+    background-color:#1c1d21;
 }
 
-.LeftBarre
+.Title
 {
-    width:50%;
-    margin-top:2rem;
-    text-align: center;
+    animation: AnimTitle 3s;
+}
+
+@keyframes AnimTitle
+{
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+.Left
+{
     display: flex;
-    flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
+    padding:1rem;
+    margin-left:10rem;
 }
 
-.MenuLeft
-{
-    width:70%;
-}
-.Contact
-{
-    font-size: 0.8rem;
-    margin-right:19rem;
-    color:#5b6370;
-}
-.Contact ul, .Menu ul, .SocialLink ul
-{
-    list-style: none;
-    display: inline-flex;
-    height:auto;
-}
-.Contact li, .Menu li
+.ContactHeader
 {
     padding:1rem;
+    margin-right:15rem;
+}
+
+.ContactHeader ul
+{
+    display:inline-flex;
+    font-size:0.8rem;
+}
+.ContactHeader li
+{
+    margin:2rem;
+    margin-top:0;
+    margin-bottom: 0;
 }
 
 .Menu
 {
-    width:100%;
-    background-color: #393e46;
-    color:#f1f1f1;
-    font-size: 0.8rem;
+    width:20%;
+    padding-left:5rem;
 }
 
-.MeTitle
+.MenuNav
 {
-    padding-bottom: 0.3rem;
+    text-align: center;
+    border-top:3px solid #1c1d21;
+    border-bottom:3px solid #1c1d21;
+    margin-top:1rem;
+    animation: AnimMenuNav 5.3s;
 }
 
-.SocialLink
+@keyframes AnimMenuNav
 {
-    width:30%;
-    height:60%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-end;
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
-.SocialLink ul
+.MenuNav ul
 {
-    height:100%;
+    display: inline-flex;
 }
-.SocialLink li
+.MenuNav li
 {
-    width:auto;
-    padding:0.4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding:0.9rem;
 }
 
-.ImgSocialLink
-{
-    width:35px;
-}
-
-.ImgSocialLink:hover
-{
-    cursor:pointer;
-}

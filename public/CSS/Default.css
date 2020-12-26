@@ -7,7 +7,16 @@ body
 {
     width:100%;
     height:100vh;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 500;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 800;
 }
 
+.LinkNav
+{
+    text-decoration: none;
+    color:#a9294f;
+}
+.LinkNav:hover
+{
+   color:#e5707e;
+}
