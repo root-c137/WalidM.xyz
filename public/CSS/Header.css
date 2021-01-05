@@ -13,14 +13,26 @@ header
     justify-content: space-between;
     margin:auto;
     color:#f4f4f2;
-    background-color:#1c1d21;
+    background-color: #1c1d21;
+    border:1px solid blue;
+    position:fixed;
+
 }
 
-.Title
+.Title, .SubTitle
 {
     animation: AnimTitle 3s;
 }
 
+.Title
+{
+    padding-top:0.5rem;
+}
+.SubTitle
+{
+    font-size: 0.7rem;
+    margin:0.5rem;
+}
 @keyframes AnimTitle
 {
     from { opacity: 0; }
@@ -32,54 +44,176 @@ header
 {
     display: flex;
     align-items: center;
-    padding:1rem;
-    margin-left:10rem;
+    position:relative;
 }
 
 .ContactHeader
 {
+    height:100%;
     padding:1rem;
-    margin-right:15rem;
+    background-color: #1c1d21;
 }
 
-.ContactHeader ul
-{
-    display:inline-flex;
-    font-size:0.8rem;
-}
-.ContactHeader li
-{
-    margin:2rem;
-    margin-top:0;
-    margin-bottom: 0;
+.ContactHeader ul {
+    display: flex;
 }
 
-.Menu
-{
-    width:20%;
-    padding-left:5rem;
-}
+
 
 .MenuNav
 {
-    text-align: center;
+    position:absolute;
     border-top:3px solid #1c1d21;
     border-bottom:3px solid #1c1d21;
-    margin-top:1rem;
+    margin-top:0.6rem;
     animation: AnimMenuNav 5.3s;
+    background-color: #FFF;
+    top:3rem;
+
 }
 
+.MenuNav ul
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.MenuNav li
+{
+    padding:0.3rem;
+}
 @keyframes AnimMenuNav
 {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
-.MenuNav ul
+
+
+@media only screen and (min-width: 150px)
 {
-    display: inline-flex;
+
+    .HeaderBarre, .Left, .ContactHeader
+    {
+        width:100%;
+        flex-direction: column;
+        text-align: center;
+    }
+    .ContactHeader
+    {
+        font-size: 0.66em;
+        padding:0.1rem;
+    }
+    .ContactHeader ul
+    {
+        flex-direction: column;
+        text-align: center;
+    }
+    .ContactHeader li
+    {
+        padding-left:1.5rem;
+        padding-right:1.5rem;
+    }
+    .Menu, .MenuNav
+    {
+        width:100%;
+        font-size:0.6rem;
+    }
 }
-.MenuNav li
+
+@media only screen and (min-width: 300px)
 {
-    padding:0.9rem;
+
+    .MenuNav, .ContactHeader
+    {
+        font-size: 0.7rem;
+    }
+
 }
+
+@media only screen and (min-width: 900px)
+{
+    .HeaderBarre, .ContactHeader, .ContactHeader ul
+    {
+        flex-direction: row;
+        align-items: center;
+    }
+    .ContactHeader ul
+    {
+        justify-content: flex-end;
+    }
+    .Left
+    {
+        flex-direction: column;
+    }
+    .ContactHeader
+    {
+        padding-right: 5rem;
+    }
+
+    .MenuNav
+    {
+        width:80%;
+    }
+
+    .MenuNav li
+    {
+        padding:0.6rem;
+    }
+}
+
+@media only screen and (min-width: 1100px)
+{
+
+    .ContactHeader
+    {
+        margin-right: 5rem;
+    }
+
+
+}
+
+@media only screen and (min-width: 1200px)
+{
+    .Menu
+    {
+        width:27%;
+        padding:0.5rem;
+    }
+
+    .ContactHeader
+    {
+        margin-right: 10rem;
+    }
+
+}
+
+@media only screen and (min-width: 1300px)
+{
+    .MenuNav
+    {
+        width:70%;
+    }
+
+    .ContactHeader
+    {
+        margin-right: 10rem;
+    }
+
+}
+@media only screen and (min-width: 1500px)
+{
+    .MenuNav
+    {
+        width:50%;
+    }
+
+    .ContactHeader
+    {
+        margin-right: 15rem;
+    }
+
+}
+
+
 
