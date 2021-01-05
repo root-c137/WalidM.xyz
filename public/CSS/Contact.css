@@ -1,0 +1,130 @@
+
+
+.ContactMain
+{
+    margin:auto;
+    margin-top:100px;
+}
+
+.PreContact
+{
+    text-align: center;
+    padding:1rem;
+    padding-bottom:3rem;
+    font-weight: normal;
+}
+.FormContact
+{
+    margin:auto;
+}
+.FormContact form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Textarea
+{
+
+}
+
+.GoMessage
+{
+    width:50%;
+    padding:0.5rem;
+    border:none;
+    outline:none;
+    text-align: center;
+    margin-top:1rem;
+    color:#f4f4f2;
+    background-color: #1c1d21;
+}
+
+@media only screen and (min-width: 150px)
+{
+    .ContactMain, .FormContact
+    {
+        width:100%;
+    }
+    .GoMessage
+    {
+        font-size:0.7rem;
+    }
+}
+
+@media only screen and (min-width: 200px)
+{
+    .ContactMain, .FormContact
+    {
+        width:90%;
+    }
+
+}
+
+@media only screen and (min-width: 350px)
+{
+    .ContactMain, .FormContact
+    {
+        width:85%;
+    }
+    .GoMessage
+    {
+        font-size:1rem;
+    }
+
+}
+
+@media only screen and (min-width: 500px)
+{
+    .ContactMain, .FormContact
+    {
+        width:75%;
+    }
+
+}
+
+@media only screen and (min-width: 700px)
+{
+    .ContactMain, .FormContact
+    {
+        width:65%;
+    }
+
+}
+
+@media only screen and (min-width: 1000px)
+{
+    .ContactMain, .FormContact
+    {
+        width:60%;
+    }
+
+}
+
+@media only screen and (min-width: 1200px)
+{
+    .ContactMain, .FormContact
+    {
+        width:55%;
+    }
+
+}
+@media only screen and (min-width: 1500px)
+{
+    .ContactMain, .FormContact
+    {
+        width:50%;
+    }
+
+}
+
+@media only screen and (min-width: 1800px)
+{
+    .ContactMain, .FormContact
+    {
+        width:45%;
+    }
+
+}

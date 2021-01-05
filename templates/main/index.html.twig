@@ -4,30 +4,42 @@
 
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('CSS/Main.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('CSS/CurriculumMain.css') }}"/>
+
 {% endblock %}
 
 {% block body %}
 <main>
+
     <section class="Presentation">
         <p>Bienvenue sur mon site personnel !<br/>
             Ce site est mon "curriculum vitae", et vous présente ce que j'ai fais en tant que développeur web, et mobile.</p>
     </section>
 
+    <section class="Curriculum">
+        <p>lorem..</p>
+    </section>
+
     <section class="Portfolio">
         <h2 class="Title">Portfolio</h2>
-        <table class="PortfolioCategory">
-            <tr>
-                <th class="Category">Site web</th>
-                <th class="Category">Application mobile</th>
-                <th class="Category">Application bureau</th>
-            </tr>
 
+        <table class="PortfolioCategory">
+
+            <tr>
+                <th class="Category Site">Site web</th>
+                <th class="Category App">Application mobile</th>
+                <th class="Category Desktop">Application bureau</th>
+            </tr>
 
         </table>
 
     </section>
+
 </main>
 
+    {% block javascripts %}
+        <script type="text/javascript" src="{{ asset("JS/PortfolioApp.js") }}"></script>
+    {% endblock %}
 {% endblock %}
 
 
