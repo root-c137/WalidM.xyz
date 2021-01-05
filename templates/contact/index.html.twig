@@ -5,12 +5,16 @@
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('CSS/FloatLabel.css') }}"/>
     <link rel="stylesheet" href="{{ asset('CSS/Contact.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('CSS/Error.css') }}"/>
+
 
 {% endblock %}
 
 {% block body %}
 
     <main class="ContactMain">
+
+        {% embed 'Partials/Error.html.twig' %}{% endembed %}
 
         <div class="PreContact">
             <p>Vous pouvez utiliser le formulaire ci-dessous afin de me contacter.</p>

@@ -1,0 +1,5 @@
+<div class="Err">
+    {% for MsgErr in app.flashes('Err') %}
+        <p class="ErrMsg">{{ MsgErr }}</p>
+    {% endfor %}
+</div>
