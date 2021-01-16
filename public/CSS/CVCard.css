@@ -1,0 +1,36 @@
+
+.CvCard
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top:1rem;
+    box-shadow: 0 0 10px #ccc;
+
+}
+
+.CvCard
+{
+    border:1px solid #ccc;
+}
+
+.Year
+{
+    font-weight: normal;
+}
+.Title
+{
+    font-weight: bold;
+}
+.Company
+{
+    font-weight: normal;
+    padding:0.5rem;
+}
+
+.StartDate, .EndDate
+{
+    font-size:0.7rem;
+    color: #a9294f;
+    padding:0.3rem;
+}

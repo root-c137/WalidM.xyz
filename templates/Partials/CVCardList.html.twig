@@ -1,0 +1,12 @@
+
+
+{% for Cv in CVList %}
+    <div class="CvCard">
+        <span class="Title">{{ Cv.Title }}</span>
+        <span class="Company">{{ Cv.Company }}</span>
+        <span class="Description">{{ Cv.Description }}</span>
+        <span class="StartDate">{{ Cv.StartDate }}</span>
+        <span class="Fleche">→</span>
+        <span class="EndDate">{{ Cv.EndDate }}</span>
+    </div>
+{% endfor %}

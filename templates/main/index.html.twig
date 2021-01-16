@@ -4,7 +4,9 @@
 
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('CSS/Main.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('CSS/CVCard.css') }}"/>
     <link rel="stylesheet" href="{{ asset('CSS/CurriculumMain.css') }}"/>
+
 
 {% endblock %}
 
@@ -16,9 +18,8 @@
             Ce site est mon "curriculum vitae", et vous présente ce que j'ai fais en tant que développeur web, et mobile.</p>
     </section>
 
-    <section class="Curriculum">
-        <p>lorem..</p>
-    </section>
+    {#Section CV....#}
+    {% embed 'Partials/Curriculum.html.twig' %}{% endembed %}
 
     <section class="Portfolio">
         <h2 class="Title">Portfolio</h2>
