@@ -14,9 +14,6 @@ header
     margin:auto;
     color:#f4f4f2;
     background-color: #1c1d21;
-    border:1px solid blue;
-    position:fixed;
-
 }
 
 .Title, .SubTitle
@@ -68,8 +65,7 @@ header
     margin-top:0.6rem;
     animation: AnimMenuNav 5.3s;
     background-color: #FFF;
-    top:3rem;
-
+    top:6.4rem;
 }
 
 .MenuNav ul
@@ -98,26 +94,29 @@ header
         width:100%;
         flex-direction: column;
         text-align: center;
+        padding:0.5rem;
     }
     .ContactHeader
     {
         font-size: 0.66em;
         padding:0.1rem;
+        text-align: center;
     }
     .ContactHeader ul
     {
         flex-direction: column;
         text-align: center;
     }
-    .ContactHeader li
-    {
-        padding-left:1.5rem;
-        padding-right:1.5rem;
-    }
+
     .Menu, .MenuNav
     {
         width:100%;
         font-size:0.6rem;
+    }
+    .MenuNav
+    {
+        top:7.6rem;
+        font-size:0.5rem;
     }
 }
 
@@ -150,10 +149,15 @@ header
     {
         padding-right: 5rem;
     }
+    .InfoContact
+    {
+        padding-right:0.5rem;
+    }
 
     .MenuNav
     {
         width:80%;
+        top:6.4em;
     }
 
     .MenuNav li
