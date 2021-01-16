@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello BackoController!{% endblock %}
+
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('CSS/Backo/Backo.css') }}"/>
+{% endblock %}
+
+{% block body %}
+
+
+    <main class="BackoMain">
+
+        <section class="Cv">
+
+            <h2>CV actuel</h2>
+
+            <a href="{{ path('AddCVForm') }}" class="Link">Ajouter une expérience</a>
+
+            <div class="CvList">
+
+                {% for Cv in CVList %}
+                     <div class="CvCard">
+                         <span class="Title">{{ Cv.Title }}</span>
+                         <span class="Company">{{ Cv.Company }}</span>
+                         <span class="Description">{{ Cv.Description }}</span>
+                         <span class="StartDate">{{ Cv.StartDate }}</span>
+                         <span class="EndDate">{{ Cv.EndDate }}</span>
+                         <button class="UpdateCardCV">Modifier</button>
+                     </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="Portfolio">
+
+            <h2>Portfloio</h2>
+        </section>
+    </main>
+{% endblock %}

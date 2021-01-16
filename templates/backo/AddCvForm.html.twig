@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter une expérience..{% endblock %}
+
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('CSS/Backo/Backo.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('CSS/FloatLabel.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('CSS/Backo/AddCV.css') }}"/>
+
+{% endblock %}
+
+{% block body %}
+
+
+    <main class="BackoMain">
+
+        <section class="AddCVForm">
+            <p class="Title">Ajoutez une nouvelle expérience : </p>
+
+            {{ form_start(Form) }}
+
+            <div class="FormGroup" >
+                {{ form_widget(Form.title) }}
+                {{ form_label(Form.title) }}
+            </div>
+            <div class="FormGroup" >
+                {{ form_widget(Form.company) }}
+                {{ form_label(Form.company) }}
+            </div>
+            <div class="FormGroup" >
+                {{ form_widget(Form.description) }}
+                {{ form_label(Form.description) }}
+            </div>
+            <div class="FormGroup" >
+                {{ form_widget(Form.start_date) }}
+                {{ form_label(Form.start_date) }}
+            </div>
+            <div class="FormGroup" >
+                {{ form_widget(Form.end_date) }}
+                {{ form_label(Form.end_date) }}
+            </div>
+
+            {{ form_widget(Form.submit) }}
+
+            {{ form_end(Form) }}
+        </section>
+    </main>
+{% endblock %}

@@ -1,0 +1,79 @@
+
+.AddCVForm
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.AddCVForm .Title
+{
+    padding:2rem;
+}
+
+@media only screen and (min-width: 150px)
+{
+    .AddCVForm
+    {
+        width:100%;
+    }
+}
+
+@media only screen and (min-width: 300px)
+{
+    .AddCVForm
+    {
+        width:90%;
+    }
+}
+
+@media only screen and (min-width: 500px)
+{
+    .AddCVForm
+    {
+        width:70%;
+    }
+}
+
+@media only screen and (min-width: 800px)
+{
+    .AddCVForm
+    {
+        width:60%;
+    }
+}
+
+@media only screen and (min-width: 1000px)
+{
+    .AddCVForm
+    {
+        width:50%;
+    }
+}
+
+@media only screen and (min-width: 1400px)
+{
+    .BackoMain
+    {
+        width:50%;
+    }
+}
+
+
+@media only screen and (min-width: 1500px)
+{
+    .BackoMain
+    {
+        width:45%;
+    }
+}
+
+@media only screen and (min-width: 1700px)
+{
+    .BackoMain
+    {
+        width:40%;
+    }
+}
+
+
+
