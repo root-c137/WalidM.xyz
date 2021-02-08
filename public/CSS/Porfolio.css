@@ -1,0 +1,106 @@
+.Portfolio
+{
+    height:100vh;
+    margin-top:5rem;
+    margin:auto;
+    color:#f4f4f2;
+}
+.Portfolio .Title
+{
+    text-align: center;
+    padding:1rem;
+}
+
+.Menu
+{
+    display: flex;
+    height:2rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin:auto;
+}
+
+.Category
+{
+    display: inline-block;
+    padding:0.2rem;
+}
+.CategoryTxt:hover
+{
+    cursor:pointer;
+}
+
+
+.Selected
+{
+    border-bottom: 2px solid #f1f2f3;
+}
+
+@media only screen and (min-width: 200px)
+{
+    .Portfolio
+    {
+        width:100%;
+    }
+    .Category
+    {
+        width:100%;
+    }
+}
+
+@media only screen and (min-width: 300px)
+{
+    .Category
+    {
+        width:35%;
+    }
+}
+
+@media only screen and (min-width: 500px)
+{
+    .Menu
+    {
+        font-size:0.8rem;
+    }
+    .Category
+    {
+
+    }
+}
+
+@media only screen and (min-width: 700px)
+{
+    .Category
+    {
+        width:20%;
+    }
+}
+
+
+@media only screen and (min-width: 1000px)
+{
+    .Category
+    {
+        width:15%;
+    }
+}
+
+
+@media only screen and (min-width: 1200px)
+{
+    .Menu
+    {
+        width:100%;
+    }
+}
+
+
+@media only screen and (min-width: 1500px)
+{
+    .Category
+    {
+        width:10%;
+    }
+}

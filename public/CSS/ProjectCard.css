@@ -1,0 +1,108 @@
+
+.ProjectsList
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top:1.5rem;
+    flex-wrap: wrap;
+}
+.ProjectCard
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 1px #ccc;
+    margin:auto;
+    margin:0.3rem;
+    flex-grow:1;
+    border-radius:10px;
+}
+
+.ProjectCard .Title, .Infos
+{
+    text-decoration: none;
+    color:#212121;
+}
+
+.ProjectCard .Title
+{
+    border-bottom:1px solid #ccc;
+}
+.Img
+{
+    width:100%;
+}
+
+.Infos, .ProjectCard .Title
+{
+    display: block;
+    width:100%;
+    text-align: center;
+    margin:auto;
+    background-color: #dfdfdf;
+    padding:0.4rem;
+    color:#1c1d21;
+}
+
+@media only screen and (min-width: 200px)
+{
+    .ProjectsList
+    {
+        width:100%;
+        flex-direction: column;
+    }
+    .ProjectCard
+    {
+        width: 100%;
+    }
+    .Title, .Infos
+    {
+        font-size:0.7rem;
+    }
+}
+
+@media only screen and (min-width: 400px)
+{
+    .ProjectsList
+    {
+        width:80%;
+    }
+
+}
+
+@media only screen and (min-width: 500px)
+{
+    .ProjectsList {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .ProjectCard
+    {
+        max-width:30%;
+        width:calc(100% / 4);
+    }
+
+}
+
+
+@media only screen and (min-width: 700px)
+{
+
+    .Title, .Infos
+    {
+        font-size:0.8rem;
+    }
+}
+
+
+@media only screen and (min-width: 1400px)
+{
+    .ProjectCard
+    {
+        max-width:20%;
+    }
+}

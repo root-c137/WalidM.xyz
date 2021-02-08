@@ -38,11 +38,11 @@ class CvFormType extends AbstractType
             ->add('description', TextareaType::class, [
                 'label' => 'Description',
                 'attr' => [
-                    'class' => 'FormControl',
+                    'class' => 'FormControl Textarea',
                     'placeholder' => 'description..',
                 ],
                 'label_attr' => [
-                    'class' => 'FormLabel'
+                    'class' => 'FormLabel FormLabelTextarea'
                 ]
              ])
             ->add('start_date', TextType::class, [
@@ -68,7 +68,7 @@ class CvFormType extends AbstractType
             ->add('submit', SubmitType::class, [
                 'label' => 'Ajouter cette expérience',
                 'attr' => [
-                    'class' => 'GoMessage'
+                    'class' => 'GoAddCV'
                 ]
             ])
         ;

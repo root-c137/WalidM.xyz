@@ -18,7 +18,10 @@
     {% embed  'Partials/Header.html.twig'%}{% endembed %}
 
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
     </body>
 </html>
 

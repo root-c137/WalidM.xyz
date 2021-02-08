@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="{{ asset('CSS/Main.css') }}"/>
     <link rel="stylesheet" href="{{ asset('CSS/CVCard.css') }}"/>
     <link rel="stylesheet" href="{{ asset('CSS/CurriculumMain.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('CSS/Porfolio.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('CSS/ProjectCard.css') }}"/>
+
 
 
 {% endblock %}
@@ -23,24 +26,13 @@
 
     <section class="Portfolio">
         <h2 class="Title">Portfolio</h2>
-
-        <table class="PortfolioCategory">
-
-            <tr>
-                <th class="Category Site">Site web</th>
-                <th class="Category App">Application mobile</th>
-                <th class="Category Desktop">Application bureau</th>
-            </tr>
-
-        </table>
+        <div id="root"></div>
 
     </section>
 
 </main>
 
-    {% block javascripts %}
-        <script type="text/javascript" src="{{ asset("JS/PortfolioApp.js") }}"></script>
-    {% endblock %}
+
 {% endblock %}
 
 

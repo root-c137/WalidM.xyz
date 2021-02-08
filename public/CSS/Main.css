@@ -14,35 +14,6 @@ main
     padding-bottom: 3rem;
 }
 
-.Portfolio
-{
-    width:50%;
-    height:100vh;
-    margin-top:5rem;
-    margin:auto;
-    color:#f4f4f2;
-}
-.Portfolio .Title
-{
-    text-align: center;
-    padding:1rem;
-}
 
-.PortfolioCategory
-{
-    width:100%;
-    text-align: center;
-    margin-top:1.5rem;
-}
-
-.Category
-{
-    width:calc(100% / 3);
-    cursor:pointer;
-}
-.Category:hover
-{
-    border-bottom: 2px solid #f1f2f3;
-}
 
 
