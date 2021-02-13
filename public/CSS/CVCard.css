@@ -1,36 +1,93 @@
 
 .CvCard
 {
-    display: flex;
+    height:230px;
+    display:flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top:1rem;
-    box-shadow: 0 0 10px #ccc;
+    margin:0.4rem;
+    padding:0;
+    background-color: #FFF;
+    box-shadow: 0 0 10px gray;
 
 }
 
-.CvCard
-{
-    border:1px solid #ccc;
-}
 
 .Year
 {
     font-weight: normal;
 }
-.Title
+
+.Curriculum .Title, .Cv .Title
 {
+    width:100%;
+    height:2rem;
+    text-align: center;
     font-weight: bold;
+    background-color: #30475e;
+    color:#dfdfdf;
+    margin-top:1rem;
+    border:1px dotted #dfdfdf;
+    border-right:none;
+    border-left:none;
 }
+
 .Company
 {
     font-weight: normal;
     padding:0.5rem;
 }
 
-.StartDate, .EndDate
+.Description
 {
-    font-size:0.7rem;
+    font-size:0.8rem;
+    font-weight: normal;
+    font-style: italic;
+    padding:0.2rem;
+    margin-top:1rem;
+}
+
+.Date
+{
+    font-size:0.6rem;
     color: #a9294f;
-    padding:0.3rem;
+    padding:1rem;
+}
+
+.Fleche
+{
+    margin:0.3rem;
+}
+
+
+@media only screen and (min-width : 200px)
+{
+    .CvCard
+    {
+        width:100%;
+    }
+}
+
+@media only screen and (min-width : 500px)
+{
+    .CvCard
+    {
+        width:calc(100%/3);
+    }
+}
+
+@media only screen and (min-width : 800px)
+{
+    .CvCard
+    {
+        width:calc(100%/4);
+    }
+}
+
+@media only screen and (min-width : 1000px)
+{
+    .CvCard
+    {
+        width:calc(100%/6);
+    }
 }

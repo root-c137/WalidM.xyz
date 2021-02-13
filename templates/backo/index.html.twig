@@ -4,6 +4,8 @@
 
 
 {% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('CSS/CurriculumMain.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('CSS/CVCard.css') }}"/>
     <link rel="stylesheet" href="{{ asset('CSS/Backo/Backo.css') }}"/>
 {% endblock %}
 
@@ -16,26 +18,49 @@
 
             <h2>CV actuel</h2>
 
-            <a href="{{ path('AddCVForm') }}" class="Link">Ajouter une expérience</a>
+            <div class="LinkAddCV">
+            <a href="{{ path('AddCVForm') }}" class="LinkAddCV">Ajouter une expérience</a>
+            </div>
 
             <div class="CvList">
-
-                {% for Cv in CVList %}
-                     <div class="CvCard">
-                         <span class="Title">{{ Cv.Title }}</span>
-                         <span class="Company">{{ Cv.Company }}</span>
-                         <span class="Description">{{ Cv.Description }}</span>
-                         <span class="StartDate">{{ Cv.StartDate }}</span>
-                         <span class="EndDate">{{ Cv.EndDate }}</span>
-                         <button class="UpdateCardCV">Modifier</button>
-                     </div>
-                {% endfor %}
+                {% embed 'Partials/CVCardList.html.twig' %}{% endembed %}
             </div>
         </section>
 
         <section class="Portfolio">
 
-            <h2>Portfloio</h2>
+            <h2 class="PortfolioTitle">Portfloio</h2>
+            <div class="LinkAddXP">
+                <a href="{{ path('AddCVForm') }}" class="LinkAddCV">Ajouter un projet</a>
+            </div>
+
+            <div class="XPListContainer">
+
+                <table class="XPList">
+                    <tr>
+                        <th class="Title">Titre</th>
+                        <th class="Desc">Description</td>
+                        <th class="Img">Image</td>
+                        <th class="Cat">Categorie</th>
+                        <th class="Github">Github</th>
+                        <th class="Link">Link</th>
+                    </tr>
+
+                    {% for Projet in Projets %}
+                        <tr>
+                            <td class="Title">{{ Projet.getTitle() }}</td>
+                            <td class="Desc">{{ Projet.getDescription() }}</td>
+                            <td class="Img">{{ Projet.getImage() }}</td>
+                            <td class="Cat">{{ Projet.getCategory() }}</td>
+                            <td class="Github">{{ Projet.getGithub() }}</td>
+                            <td class="Link"><a href="{{ Projet.getLink() }}" class="LinkProjet">{{ Projet.getLink() }}</a></td>
+                            <td><a href="#" class="UpdateXPButton">Modifier</a></td>
+                        </tr>
+                    {% endfor %}
+
+                </table>
+            </div>
         </section>
     </main>
+
 {% endblock %}

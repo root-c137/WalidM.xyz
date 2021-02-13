@@ -6,7 +6,6 @@
     flex-direction: column;
     text-align: center;
     background-color: #fff;
-    padding:3rem;
 }
 
 .CVList
@@ -15,15 +14,34 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width:60%;
+    width:70%;
     border-top:2px solid #1c1d21;
     margin:auto;
-    padding:1rem;
+    flex-wrap: wrap;
+
 }
 
-.CvCard
+@media only screen and (min-width: 500px)
 {
-    margin:0.4rem;
-    width:calc(100% / 5);
-    min-height:150px;
+    .CVList
+    {
+        width:100%;
+    }
 }
+
+@media only screen and (min-width: 800px)
+{
+    .CVList
+    {
+        width:90%;
+    }
+}
+
+@media only screen and (min-width: 1000px)
+{
+    .CVList
+    {
+        width:70%;
+    }
+}
+

@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Cv;
+use App\Entity\Projet;
 use App\Form\CvFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -20,8 +21,15 @@ class BackoController extends AbstractController
         $RepCV = $Doc->getRepository(Cv::class);
         $CV = $RepCV->findAll();
 
+        //On récup tout les portfolio..
+        $RepXP = $Doc->getRepository(Projet::class);
+        $Projets = $RepXP->findAll();
+
+
+
         return $this->render('backo/index.html.twig', [
-            'CVList' => $CV
+            'CVList' => $CV,
+            'Projets' => $Projets
         ]);
     }
 
@@ -35,7 +43,6 @@ class BackoController extends AbstractController
             'method' => 'POST',
             'action' => $this->generateUrl('AddCV')
         ]);
-
 
         return $this->render('backo/AddCvForm.html.twig',[
             'Form' => $Form->createView()
