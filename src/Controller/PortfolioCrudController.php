@@ -62,7 +62,24 @@ class PortfolioCrudController extends AbstractController
             $this->addFlash('Err', 'Formulaire non valide..');
 
 
-
         return $this->redirectToRoute('UpdateProjetForm', array('id' => $id));
+    }
+
+    /**
+     * @Route("/backo/DeleteProjet/{id}", name="DeleteProjet")
+     */
+    public function DeleteProjet(Request $Request, $id): Response
+    {
+        $Doc = $this->getDoctrine()->getManager();
+        $RepProjet = $Doc->getRepository(Projet::class);
+        $Projet = $RepProjet->find($id);
+
+        $Doc->remove($Projet);
+        $Doc->flush();
+
+        $this->addFlash('Notice', 'Projet bien supprimé..');
+
+
+        return $this->redirectToRoute('backo');
     }
 }

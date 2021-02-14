@@ -62,5 +62,8 @@
             {{ form_end(Form) }}
         </section>
 
+        {% if Mode == 'Update' %}
+            <a href="{{ path('DeleteProjet', {'id' : Projet.getId()} ) }}" class="Delete">Supprimer ce projet ?</a>
+        {% endif %}
     </main>
 {% endblock %}

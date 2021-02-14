@@ -84,6 +84,7 @@ class BackoController extends AbstractController
 
         return $this->render('portfolio_crud/index.html.twig', [
             'Form' => $Form->createView(),
+            'Projet' => $Projet,
             'Mode' => 'Update'
         ]);
     }
