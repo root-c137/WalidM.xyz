@@ -38,6 +38,19 @@
     border-bottom: 2px solid #f1f2f3;
 }
 
+
+.DownloadCV
+{
+    margin:auto;
+    font-size:0.9rem;
+    font-weight: normal;
+    padding:1rem;
+}
+.DownloadCV a
+{
+    text-decoration: none;
+    color:#a9294f;
+}
 @media only screen and (min-width: 200px)
 {
     .Portfolio
