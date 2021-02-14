@@ -18,7 +18,13 @@
         {% embed 'Partials/Error.html.twig' %}{% endembed %}
 
         <section class="AddForm">
-        <p class="Title">Ajoutez un nouveau projet (tous les champs sont obligatoire): </p>
+        <p class="Title">
+            {% if Mode == 'Add'%}
+                 Ajoutez
+            {% elseif Mode == 'Update' %}
+                 Modifier
+            {% endif %}
+            un nouveau projet (tous les champs sont obligatoire): </p>
 
         {{ form_start(Form) }}
 

@@ -54,7 +54,7 @@
                             <td class="Cat">{{ Projet.getCategory() }}</td>
                             <td class="Github">{{ Projet.getGithub() }}</td>
                             <td class="Link"><a href="{{ Projet.getLink() }}" class="LinkProjet">{{ Projet.getLink() }}</a></td>
-                            <td><a href="#" class="UpdateXPButton">Modifier</a></td>
+                            <td><a href="{{ path('UpdateProjetForm', {'id' : Projet.getId()}) }}" class="UpdateXPButton">Modifier</a></td>
                         </tr>
                     {% endfor %}
 

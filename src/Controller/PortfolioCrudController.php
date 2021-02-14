@@ -14,7 +14,7 @@ class PortfolioCrudController extends AbstractController
     /**
      * @Route("/backo/AddProjet", name="AddProjet")
      */
-    public function AddXP(Request $Request): Response
+    public function AddProjet(Request $Request): Response
     {
         $Projet = new Projet();
         $Form = $this->createForm(ProjetFormType::class, $Projet);
@@ -36,5 +36,33 @@ class PortfolioCrudController extends AbstractController
 
 
         return $this->redirectToRoute('AddProjetForm');
+    }
+
+
+    /**
+     * @Route("/backo/UpdateProjet/{id}", name="UpdateProjet")
+     */
+    public function UpdateProjet(Request $Request, $id): Response
+    {
+        $Doc = $this->getDoctrine()->getManager();
+        $RepProjet = $Doc->getRepository(Projet::class);
+        $Projet = $RepProjet->find($id);
+
+        $Form = $this->createForm(ProjetFormType::class, $Projet);
+        $Form->handleRequest($Request);
+
+        if($Form->isSubmitted() && $Form->isValid() )
+        {
+            $Projet = $Form->getData();
+
+            $Doc->flush();
+            $this->addFlash('Notice', 'Projet bien modifié..');
+        }
+        else
+            $this->addFlash('Err', 'Formulaire non valide..');
+
+
+
+        return $this->redirectToRoute('UpdateProjetForm', array('id' => $id));
     }
 }
