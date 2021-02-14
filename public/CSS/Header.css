@@ -11,6 +11,7 @@ header
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     margin:auto;
     color:#f4f4f2;
     background-color: #1c1d21;
@@ -46,13 +47,13 @@ header
 
 .ContactHeader
 {
-    height:100%;
     padding:1rem;
     background-color: #1c1d21;
 }
 
 .ContactHeader ul {
     display: flex;
+    padding-right:2rem;
 }
 
 
@@ -79,12 +80,27 @@ header
 {
     padding:0.3rem;
 }
+
+.SocialMenu
+{
+    width:100%;
+}
+.LinkIcon, .GitHubIcon
+{
+    width:3%;
+    margin:0.5rem;
+}
+
+.GithubIcon
+{
+    background-color: #fff;
+}
+
 @keyframes AnimMenuNav
 {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
-
 
 @media only screen and (min-width: 150px)
 {
@@ -122,12 +138,10 @@ header
 
 @media only screen and (min-width: 300px)
 {
-
     .MenuNav, .ContactHeader
     {
         font-size: 0.7rem;
     }
-
 }
 
 @media only screen and (min-width: 900px)
@@ -137,6 +151,10 @@ header
         flex-direction: row;
         align-items: center;
     }
+    .HeaderBarre
+    {
+        justify-content: space-between;
+    }
     .ContactHeader ul
     {
         justify-content: flex-end;
@@ -145,10 +163,7 @@ header
     {
         flex-direction: column;
     }
-    .ContactHeader
-    {
-        padding-right: 5rem;
-    }
+
     .InfoContact
     {
         padding-right:0.5rem;
@@ -169,10 +184,6 @@ header
 @media only screen and (min-width: 1100px)
 {
 
-    .ContactHeader
-    {
-        margin-right: 5rem;
-    }
 
 
 }
@@ -185,10 +196,6 @@ header
         padding:0.5rem;
     }
 
-    .ContactHeader
-    {
-        margin-right: 10rem;
-    }
 
 }
 
@@ -199,22 +206,12 @@ header
         width:70%;
     }
 
-    .ContactHeader
-    {
-        margin-right: 10rem;
-    }
-
 }
 @media only screen and (min-width: 1500px)
 {
     .MenuNav
     {
         width:50%;
-    }
-
-    .ContactHeader
-    {
-        margin-right: 15rem;
     }
 
 }
