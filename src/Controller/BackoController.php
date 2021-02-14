@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Cv;
 use App\Entity\Projet;
 use App\Form\CvFormType;
+use App\Form\ProjetFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -45,6 +46,22 @@ class BackoController extends AbstractController
         ]);
 
         return $this->render('backo/AddCvForm.html.twig',[
+            'Form' => $Form->createView()
+        ]);
+    }
+
+    /**
+     * @Route("/backo/ajouter-un-projet", name="AddProjetForm")
+     */
+    public function AddXPForm(): Response
+    {
+        $Projet = new Projet();
+        $Form = $this->createForm(ProjetFormType::class, $Projet, [
+            'method' => 'POST',
+            'action' => $this->generateUrl('AddProjet')
+        ]);
+
+        return $this->render('portfolio_crud/index.html.twig', [
             'Form' => $Form->createView()
         ]);
     }

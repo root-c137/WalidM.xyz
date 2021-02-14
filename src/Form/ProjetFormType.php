@@ -2,7 +2,7 @@
 
 namespace App\Form;
 
-use App\Entity\Cv;
+use App\Entity\Projet;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -10,13 +10,14 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class CvFormType extends AbstractType
+class ProjetFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title', TextType::class,[
+            ->add('Title', TextType::class,[
                 'label' => 'Titre',
+                'required' => true,
                 'attr' => [
                     'class' => 'FormControl',
                     'placeholder' => 'titre..'
@@ -25,48 +26,63 @@ class CvFormType extends AbstractType
                     'class' => 'FormLabel'
                 ]
             ])
-            ->add('company', TextType::class, [
-                'label' => 'Entreprise',
-                'attr' => [
-                    'class' => 'FormControl',
-                    'placeholder' => 'entreprise..'
-                ],
-                'label_attr' => [
-                    'class' => 'FormLabel'
-                ]
-            ])
-            ->add('description', TextareaType::class, [
+            ->add('Description', TextareaType::class, [
                 'label' => 'Description',
+                'required' => true,
                 'attr' => [
                     'class' => 'FormControl Textarea',
-                    'placeholder' => 'description..',
+                    'placeholder' => 'description...'
                 ],
                 'label_attr' => [
-                    'class' => 'FormLabel FormLabelTextarea'
+                    'class' => 'FormLabel  FormLabelTextarea'
                 ]
-             ])
-            ->add('start_date', TextType::class, [
-                'label' => 'Date de début',
+            ])
+            ->add('Image', TextType::class, [
+                'label' => 'Image',
+                'required' => true,
                 'attr' => [
                     'class' => 'FormControl',
-                    'placeholder' => 'début..'
+                    'placeholder' => 'image..'
                 ],
                 'label_attr' => [
                     'class' => 'FormLabel'
                 ]
             ])
-            ->add('end_date', TextType::class, [
-                'label' => 'Date de fin',
+            ->add('Category', TextType::class, [
+                'label' => 'Category',
+                'required' => true,
                 'attr' => [
                     'class' => 'FormControl',
-                    'placeholder' => 'fin..'
+                    'placeholder' => 'categorie...'
                 ],
                 'label_attr' => [
                     'class' => 'FormLabel'
                 ]
             ])
+            ->add('Github', TextType::class, [
+                'label' => 'Github',
+                'attr' => [
+                    'class' => 'FormControl',
+                    'placeholder' => 'github..'
+                ],
+                'label_attr' => [
+                    'class' => 'FormLabel'
+                ]
+            ])
+            ->add('Link', TextType::class, [
+                'label' => 'Link',
+                'required' => true,
+                'attr' => [
+                    'class' => 'FormControl',
+                    'placeholder' => 'link..'
+                ],
+                'label_attr' => [
+                    'class' => 'FormLabel'
+                ]
+            ])
+
             ->add('submit', SubmitType::class, [
-                'label' => 'Ajouter cette expérience',
+                'label' => 'Ajouter',
                 'attr' => [
                     'class' => 'GoAddButton'
                 ]
@@ -77,7 +93,7 @@ class CvFormType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => Cv::class,
+            'data_class' => Projet::class,
         ]);
     }
 }

@@ -35,6 +35,5 @@ class CVCrudController extends AbstractController
         {
             return $this->redirectToRoute('AddCVForm');
         }
-
     }
 }

@@ -6,7 +6,12 @@
     text-align: center;
 }
 
-.ErrMsg, .NoticeMsg
+.ErrMsg
 {
     color:#ff577f;
+}
+
+.NoticeMsg
+{
+    color:darkgreen;
 }

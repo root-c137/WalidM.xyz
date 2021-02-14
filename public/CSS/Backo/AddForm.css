@@ -1,0 +1,81 @@
+
+.AddForm
+{
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+}
+
+.AddForm .Title
+{
+    padding:2rem;
+}
+
+
+@media only screen and (min-width: 150px)
+{
+    .AddForm
+    {
+        width:100%;
+    }
+}
+
+@media only screen and (min-width: 300px)
+{
+    .AddForm
+    {
+        width:90%;
+    }
+}
+
+@media only screen and (min-width: 500px)
+{
+    .AddForm
+    {
+        width:70%;
+    }
+}
+
+@media only screen and (min-width: 800px)
+{
+    .AddForm
+    {
+        width:60%;
+    }
+}
+
+@media only screen and (min-width: 1000px)
+{
+    .AddForm
+    {
+        width:50%;
+    }
+}
+
+@media only screen and (min-width: 1400px)
+{
+    .BackoMain
+    {
+        width:50%;
+    }
+}
+
+
+@media only screen and (min-width: 1500px)
+{
+    .BackoMain
+    {
+        width:45%;
+    }
+}
+
+@media only screen and (min-width: 1700px)
+{
+    .BackoMain
+    {
+        width:40%;
+    }
+}
+
+
+

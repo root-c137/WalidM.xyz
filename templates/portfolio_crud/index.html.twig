@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PortfolioCrudController!{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('CSS/Backo/Backo.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('CSS/FloatLabel.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('CSS/Backo/AddForm.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('CSS/NoticeMsg.css') }}"/>
+
+{% endblock %}
+
+{% block body %}
+
+    <main class="BackoMain">
+
+        {% embed 'Partials/Notice.html.twig' %}{% endembed %}
+        {% embed 'Partials/Error.html.twig' %}{% endembed %}
+
+        <section class="AddForm">
+        <p class="Title">Ajoutez un nouveau projet (tous les champs sont obligatoire): </p>
+
+        {{ form_start(Form) }}
+
+        <div class="FormGroup">
+            {{ form_widget(Form.Title) }}
+            {{ form_label(Form.Title) }}
+        </div>
+
+        <div class="FormGroup FormGroupTextarea">
+            {{ form_widget(Form.Description) }}
+            {{ form_label(Form.Description) }}
+        </div>
+
+        <div class="FormGroup">
+            {{ form_widget(Form.Image) }}
+            {{ form_label(Form.Image) }}
+        </div>
+
+        <div class="FormGroup">
+            {{ form_widget(Form.Category) }}
+            {{ form_label(Form.Category) }}
+        </div>
+
+        <div class="FormGroup">
+            {{ form_widget(Form.Github) }}
+            {{ form_label(Form.Github) }}
+        </div>
+
+        <div class="FormGroup">
+            {{ form_widget(Form.Link) }}
+            {{ form_label(Form.Link) }}
+        </div>
+
+            {{ form_widget(Form.submit) }}
+            {{ form_end(Form) }}
+        </section>
+
+    </main>
+{% endblock %}
