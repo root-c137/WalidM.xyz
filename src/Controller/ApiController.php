@@ -33,7 +33,6 @@ class ApiController extends AbstractController
                 'Category' => $Project->getCategory(),
                 'Link' => $Project->getLink()
             );
-
         }
 
         $response = new Response();
@@ -46,6 +45,5 @@ class ApiController extends AbstractController
 
         return $response;
     }
-
 
 }

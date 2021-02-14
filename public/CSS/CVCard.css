@@ -19,8 +19,9 @@
 
 .Curriculum .Title, .Cv .Title
 {
+    display:block;
     width:100%;
-    height:2rem;
+    min-height:2rem;
     text-align: center;
     font-weight: bold;
     background-color: #30475e;
@@ -29,6 +30,7 @@
     border:1px dotted #dfdfdf;
     border-right:none;
     border-left:none;
+    padding:0.5rem;
 }
 
 .Company
@@ -83,7 +85,15 @@
     }
 }
 
-@media only screen and (min-width : 1000px)
+@media only screen and (min-width : 1200px)
+{
+    .CvCard
+    {
+        width:calc(100%/5);
+    }
+}
+
+@media only screen and (min-width : 1300px)
 {
     .CvCard
     {

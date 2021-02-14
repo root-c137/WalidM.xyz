@@ -76,22 +76,24 @@
 
 .XPList
 {
-    width:100%;
-    font-size:0.8rem;
+    width:80%;
+    font-size:0.66rem;
+    margin:auto;
 }
 
 .XPList th
 {
+    width:calc(100% / 7);
     border:1px solid #222222;
     text-align: center;
     padding:0.5rem;
+
 }
 .XPList td
 {
+    width:calc(100% / 7);
     border:1px solid #ccc;
-    text-align: center;
-    padding-top:0.5rem;
-    padding-bottom: 0.5rem;
+    padding:0.5rem;
 }
 
 .XPList .LinkProjet, .UpdateXPButton

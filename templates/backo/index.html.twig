@@ -19,7 +19,7 @@
         {% embed 'Partials/Notice.html.twig' %}{% endembed %}
         {% embed 'Partials/Error.html.twig' %}{% endembed %}
 
-        <section class="Cv">
+        <section id="AncreCV" class="Cv">
 
             <h2>CV actuel</h2>
 
@@ -32,7 +32,7 @@
             </div>
         </section>
 
-        <section class="Portfolio">
+        <section id="AncrePortfolio" class="Portfolio">
 
             <h2 class="PortfolioTitle">Portfloio</h2>
             <div class="LinkAddXP">
@@ -49,6 +49,7 @@
                         <th class="Cat">Categorie</th>
                         <th class="Github">Github</th>
                         <th class="Link">Link</th>
+                        <th class="Action">Action</th>
                     </tr>
 
                     {% for Projet in Projets %}
