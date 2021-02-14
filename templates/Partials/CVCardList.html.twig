@@ -14,6 +14,9 @@
                 {{ Cv.StartDate }}<span class="Fleche">→</span>{{ Cv.EndDate }}
         </div>
 
+        {% if Mode == 'Backo' %}
+            <a href="{{ path('UpdateCVForm', {'id' : Cv.getId()}) }}" class="UpdateXPButton">Modifier</a>
+        {% endif %}
     </div>
 {% endfor %}
 </div>

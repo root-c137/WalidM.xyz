@@ -19,7 +19,8 @@ class MainController extends AbstractController
         $CV = $RepCV->findAll();
 
         return $this->render('main/index.html.twig', [
-            'CVList' => $CV
+            'CVList' => $CV,
+            'Mode' => 'Main'
         ]);
     }
 

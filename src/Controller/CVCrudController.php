@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use function Sodium\add;
 
 class CVCrudController extends AbstractController
 {
@@ -34,6 +35,34 @@ class CVCrudController extends AbstractController
         else
         {
             return $this->redirectToRoute('AddCVForm');
+        }
+    }
+
+    /**
+     * @Route("/backo/UpdateCv/{id}", name="UpdateCV")
+     */
+    public function UpdateCV(Request $Request, $id): Response
+    {
+        $Doc = $this->getDoctrine()->getManager();
+        $RepCV = $Doc->getRepository(Cv::class);
+        $Cv = $RepCV->find($id);
+
+        $Form = $this->createForm(CvFormType::class, $Cv);
+        $Form->handleRequest($Request);
+
+        if($Form->isSubmitted() && $Form->isValid() )
+        {
+
+            $Cv = $Form->getData();
+            $Doc->flush();
+
+            $this->addFlash('Notice', 'Cette expérience à bien été modifier');
+            return $this->redirectToRoute('UpdateCVForm', array('id' => $id) );
+        }
+        else
+        {
+            $this->addFlash('Err', 'Formulaire non valide..');
+            return $this->redirectToRoute('UpdateCVForm', array('id' => $id) );
         }
     }
 }

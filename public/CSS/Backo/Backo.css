@@ -16,7 +16,7 @@
     justify-content: flex-start;
     margin-bottom: 2rem;
 }
-.CvCard, .CvList
+.CvCard
 {
     display: flex;
     flex-direction: column;
@@ -36,6 +36,7 @@
 .Title
 {
     font-weight: bold;
+    width:100%;
 }
 .Company
 {
@@ -99,6 +100,11 @@
     color:#5eb5e0;
 }
 
+.UpdateXPButton
+{
+    padding:0.5rem;
+}
+
 
 @media only screen and (min-width: 150px)
 {
@@ -149,14 +155,13 @@
 
 @media only screen and (min-width: 1000px)
 {
-    .BackoMain
+    .CvCard
     {
-        width:80%;
+        width:calc(100%/3);
     }
-
     .XPListContainer
     {
-        width:80%;
+        width:100%;
     }
 }
 
@@ -164,7 +169,7 @@
 {
     .CvCard
     {
-        width:calc(100% / 5);
+        width:calc(100% / 4);
     }
 }
 

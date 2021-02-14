@@ -31,7 +31,8 @@ class BackoController extends AbstractController
 
         return $this->render('backo/index.html.twig', [
             'CVList' => $CV,
-            'Projets' => $Projets
+            'Projets' => $Projets,
+            'Mode' => 'Backo'
         ]);
     }
 
@@ -47,7 +48,30 @@ class BackoController extends AbstractController
         ]);
 
         return $this->render('backo/AddCvForm.html.twig',[
-            'Form' => $Form->createView()
+            'Form' => $Form->createView(),
+            'Mode' => 'Add'
+        ]);
+    }
+
+
+    /**
+     * @Route("/backo/modifier-une-experience/{id}", name="UpdateCVForm")
+     */
+    public function UpdateCVForm($id): Response
+    {
+        $Doc = $this->getDoctrine()->getManager();
+        $RepCv = $Doc->getRepository(Cv::class);
+        $Cv = $RepCv->find($id);
+
+        $Form = $this->createForm(CvFormType::class, $Cv, [
+            'method' => 'POST',
+            'action' => $this->generateUrl('UpdateCV', ['id' => $id])
+        ]);
+
+        return $this->render('backo/AddCvForm.html.twig',[
+            'Form' => $Form->createView(),
+            'Mode' => 'Update',
+            'CV' => $Cv
         ]);
     }
 

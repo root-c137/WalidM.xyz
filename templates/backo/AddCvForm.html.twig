@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{{ asset('CSS/Backo/Backo.css') }}"/>
     <link rel="stylesheet" href="{{ asset('CSS/FloatLabel.css') }}"/>
     <link rel="stylesheet" href="{{ asset('CSS/Backo/AddForm.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('CSS/NoticeMsg.css') }}"/>
 
 {% endblock %}
 
@@ -14,9 +15,18 @@
 
 
     <main class="BackoMain">
+        {% embed 'Partials/Notice.html.twig' %}{% endembed %}
+        {% embed 'Partials/Error.html.twig' %}{% endembed %}
 
         <section class="AddForm">
-            <p class="Title">Ajoutez une nouvelle expérience : </p>
+            <p class="Title">
+                {% if Mode == 'Add' %}
+                Ajouter
+                {% elseif Mode == 'Update' %}
+                Modifier
+                {% endif %}
+                une nouvelle expérience :
+            </p>
 
             {{ form_start(Form) }}
 
@@ -41,7 +51,11 @@
                 {{ form_label(Form.end_date) }}
             </div>
 
-            {{ form_widget(Form.submit) }}
+            {% if Mode == 'Add' %}
+              {{ form_widget(Form.submit, {'label':'Ajouter une expérience'}) }}
+            {% elseif Mode == 'Update' %}
+              {{ form_widget(Form.submit, {'label':'Modifier cette expérience'}) }}
+            {% endif %}
 
             {{ form_end(Form) }}
         </section>
