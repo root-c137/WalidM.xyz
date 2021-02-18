@@ -38,7 +38,13 @@
     border-bottom: 2px solid #f1f2f3;
 }
 
-
+.InfoPortfolio
+{
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: normal;
+    padding:0.5rem;
+}
 .DownloadCV
 {
     margin:auto;

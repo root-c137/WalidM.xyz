@@ -18,6 +18,9 @@ class BackoController extends AbstractController
      */
     public function index(): Response
     {
+        $LinkLinkedin = "https://www.linkedin.com/in/walidmoussa/";
+        $LinkGithub = "https://github.com/rootbu";
+
         //On récup tout les cv..
         $Doc = $this->getDoctrine()->getManager();
         $RepCV = $Doc->getRepository(Cv::class);

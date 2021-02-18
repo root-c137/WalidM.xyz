@@ -22,8 +22,8 @@
 
 
         <section class="SocialMenu">
-            <a href="{{ LinkLinkedin }}"><img class="LinkIcon" src="{{ asset('/Imgs/linkedin.png') }}"/></a>
-            <a href="{{ LinkGithub }}"><img class="GitHubIcon" src="{{ asset('/Imgs/GitHubLight.png') }}"/></a>
+            <a href="{{ app.session.get('LinkLinkedin') }}"><img class="LinkIcon" src="{{ asset('/Imgs/linkedin.png') }}"/></a>
+            <a href="{{ app.session.get('LinkGithub') }}"><img class="GitHubIcon" src="{{ asset('/Imgs/GitHubLight.png') }}"/></a>
         </section>
 
         <section class="ContactHeader">

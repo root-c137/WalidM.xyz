@@ -54,7 +54,8 @@
             {% if Mode == 'Add' %}
               {{ form_widget(Form.submit, {'label':'Ajouter une expérience'}) }}
             {% elseif Mode == 'Update' %}
-              {{ form_widget(Form.submit, {'label':'Modifier cette expérience'}) }}
+              {{ form_widget(Form.submit, {'label':'Modifier cette expérience'}) }}<br/>
+               <a href="{{ path('DeleteXP', {'id' : CV.getId()} ) }}" class="Delete">Supprimer cette expérience ? </a>
             {% endif %}
 
             {{ form_end(Form) }}

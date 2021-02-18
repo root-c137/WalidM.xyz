@@ -5,10 +5,18 @@ namespace App\Controller;
 use App\Entity\Cv;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
 class MainController extends AbstractController
 {
+    private $Session;
+
+    public function __construct(SessionInterface $Session)
+    {
+        $this->Session = $Session;
+    }
+
     /**
      * @Route("/", name="main")
      */
@@ -21,11 +29,13 @@ class MainController extends AbstractController
         $RepCV = $Doc->getRepository(Cv::class);
         $CV = $RepCV->findAll();
 
+        $this->Session->set('LinkLinkedin', $LinkLinkedin);
+        $this->Session->set('LinkGithub', $LinkGithub);
+
+
         return $this->render('main/index.html.twig', [
             'CVList' => $CV,
             'Mode' => 'Main',
-            'LinkLinkedin' => $LinkLinkedin,
-            'LinkGithub' => $LinkGithub
         ]);
     }
 

@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Cv;
+use App\Entity\Projet;
 use App\Form\CvFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -64,5 +65,21 @@ class CVCrudController extends AbstractController
             $this->addFlash('Err', 'Formulaire non valide..');
             return $this->redirectToRoute('UpdateCVForm', array('id' => $id) );
         }
+    }
+
+    /**
+     * @Route("/backo/DeleteXP/{id}", name="DeleteXP")
+     */
+    public function DeleteXP(Request $Request, $id): Response
+    {
+        $Doc = $this->getDoctrine()->getManager();
+        $RepXP = $Doc->getRepository(Cv::class);
+        $XP = $RepXP->find($id);
+
+        $Doc->remove($XP);
+        $Doc->flush();
+
+        $this->addFlash('Notice', 'XP bien supprimé..');
+        return $this->redirectToRoute('backo');
     }
 }
