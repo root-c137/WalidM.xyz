@@ -1,0 +1,55 @@
+
+.ProjetMain
+{
+    width:50%;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:5rem;
+    text-align: center;
+    font-size:0.8rem;
+}
+
+.ProjetMain .Title
+{
+    padding:1rem;
+    font-size:1rem;
+}
+.Image
+{
+    width:90%;
+    text-align: center;
+    box-shadow: 0 0 10px #ccc;
+}
+.Image:hover
+{
+    box-shadow: none;
+}
+
+.Description
+{
+    width:55%;
+    margin:auto;
+    margin-top:1.5rem;
+    font-weight: normal;
+}
+
+.Links
+{
+    margin-top:1rem;
+}
+.GithubLink
+{
+    display: inline-block;
+    margin:1rem;
+    font-weight: normal;
+    color:#a9294f;
+    text-decoration: none;
+}
+
+.ProjetMain .GitHubIcon
+{
+    width:3%;
+}

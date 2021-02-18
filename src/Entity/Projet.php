@@ -49,6 +49,11 @@ class Projet
      */
     private $Link;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $ApiLink;
+
 
 
     public function __construct()
@@ -130,6 +135,18 @@ class Projet
     public function setLink(string $Link): self
     {
         $this->Link = $Link;
+
+        return $this;
+    }
+
+    public function getApiLink(): ?string
+    {
+        return $this->ApiLink;
+    }
+
+    public function setApiLink(string $ApiLink): self
+    {
+        $this->ApiLink = $ApiLink;
 
         return $this;
     }

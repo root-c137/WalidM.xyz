@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProjetController!{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('CSS/Projet.css') }}"/>
+{% endblock %}
+{% block body %}
+
+
+    <main class="ProjetMain">
+
+        <h2 class="Title">{{ Projet.getTitle() }}</h2>
+
+        <div class="PresentationProjet">
+            <a href="{{ Projet.getLink() }}" target="_blank"><img class="Image" src="{{ asset("Imgs/"~Projet.getImage() ) }}" /></a>
+            <p class="Description">{{ Projet.getDescription() }}</p>
+
+            <div class="Links">
+                  <img class="GitHubIcon" src="{{ asset('Imgs/githubicon.png') }}"/><a class="GithubLink" href="{{ Projet.getGithub() }}">{{ Projet.getGithub() }}</a>
+            </div>
+        </div>
+    </main>
+{% endblock %}

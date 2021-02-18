@@ -31,7 +31,8 @@ class ApiController extends AbstractController
                 'Image' => $Project->getImage(),
                 'Github' => $Project->getGithub(),
                 'Category' => $Project->getCategory(),
-                'Link' => $Project->getLink()
+                'Link' => $Project->getLink(),
+                'ApiLink' => $this->generateUrl('Projet', ['id' => $Project->getId()] )
             );
         }
 
