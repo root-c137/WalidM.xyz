@@ -1,0 +1,12 @@
+
+
+<section class="Presentation">
+    <h2 class="Title">Présentation</h2>
+
+    <p class="PresentationTxt">{{ Presentation.getTexte() }}</p>
+
+    {% if Mode == 'Backo' %}
+      <a href="{{ path('UpdatePresentationForm')}}" class="UpdateXPButton">Modifier</a>
+    {% endif %}
+
+</section>

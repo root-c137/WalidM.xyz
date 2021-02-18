@@ -1,0 +1,29 @@
+
+
+.Presentation
+{
+    width:70%;
+    margin:auto;
+    font-weight: normal;
+    font-size:0.8rem;
+    margin-bottom:4rem;
+}
+
+.Presentation .Title
+{
+    font-size:1rem;
+    padding:1rem;
+}
+
+.UpdatePresentationMain
+{
+    width:40%;
+    margin:auto;
+    margin-top:5rem;
+}
+
+.UpdatePresentationMain .Title
+{
+    margin:1rem;
+    text-align: center;
+}

@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Cv;
+use App\Entity\Presentation;
 use App\Entity\Projet;
 use App\Form\CvFormType;
 use App\Form\ProjetFormType;
@@ -26,16 +27,19 @@ class BackoController extends AbstractController
         $RepCV = $Doc->getRepository(Cv::class);
         $CV = $RepCV->findAll();
 
+        $RepPresentation = $Doc->getRepository(Presentation::class);
+        $Presentation = $RepPresentation->find(1);
+
         //On récup tout les portfolio..
         $RepXP = $Doc->getRepository(Projet::class);
         $Projets = $RepXP->findAll();
 
 
-
         return $this->render('backo/index.html.twig', [
             'CVList' => $CV,
             'Projets' => $Projets,
-            'Mode' => 'Backo'
+            'Mode' => 'Backo',
+            'Presentation' => $Presentation
         ]);
     }
 

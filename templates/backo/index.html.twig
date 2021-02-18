@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="{{ asset('CSS/CurriculumMain.css') }}"/>
     <link rel="stylesheet" href="{{ asset('CSS/CVCard.css') }}"/>
     <link rel="stylesheet" href="{{ asset('CSS/Backo/Backo.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('CSS/Backo/Presentation.css') }}"/>
+
+
     <link rel="stylesheet" href="{{ asset('CSS/NoticeMsg.css') }}"/>
 
 {% endblock %}
@@ -18,6 +21,8 @@
     <main class="BackoMain">
         {% embed 'Partials/Notice.html.twig' %}{% endembed %}
         {% embed 'Partials/Error.html.twig' %}{% endembed %}
+
+        {% embed 'Partials/Presentation.html.twig' %}{% endembed %}
 
         <section id="AncreCV" class="Cv">
 

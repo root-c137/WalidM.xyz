@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier la présentation{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('CSS/Backo/Presentation.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('CSS/FloatLabel.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('CSS/NoticeMsg.css') }}"/>
+
+{% endblock %}
+
+{% block body %}
+
+    <main class="UpdatePresentationMain">
+
+        {% embed 'Partials/Notice.html.twig' %}{% endembed %}
+        {% embed 'Partials/Error.html.twig' %}{% endembed %}
+
+        <section class="UpdateForm">
+            <p class="Title">Modifier la présentation :</p>
+
+            {{ form_start(Form) }}
+
+            <div class="FormGroupTextarea">
+                {{ form_widget(Form.Texte) }}
+                {{ form_label(Form.Texte) }}
+            </div>
+
+            {{ form_widget(Form.submit) }}
+            {{ form_end(Form) }}
+        </section>
+
+    </main>
+{% endblock %}
