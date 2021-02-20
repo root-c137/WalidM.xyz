@@ -2,7 +2,11 @@ import React, {Fragment} from 'react';
 
 const ProjectCard = ({Project}) =>
 {
-    const Img = require(`../Images/${Project.Image}`);
+    let Img;
+    if(Project.Category === "Site")
+        Img = require(`../Images/Sites/${Project.Image}`);
+    if(Project.Category == "Appli")
+        Img = require(`../Images/Applis/${Project.Image}`);
 
     return (
     <Fragment>
