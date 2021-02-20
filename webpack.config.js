@@ -70,6 +70,20 @@ Encore
 
     // uncomment if you're having problems with a jQuery plugin
     //.autoProvidejQuery()
+
+    .configureLoaderRule('images', rule => {
+        rule.options.esModule = false;
+    })
+
+    // OR if you want to use `url-loader`
+    .configureUrlLoader({
+        images: {
+            esModule: false
+        }
+    });
+
 ;
 
 module.exports = Encore.getWebpackConfig();
+
+

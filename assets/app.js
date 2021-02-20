@@ -83,11 +83,10 @@ class App extends Component
                 <div className="App">
 
                     <Menu MenuClick = {this.handleClick} Category={this.state.Category} />
-
                     <div className="ProjectsList">
                         {
                             Projects['Projects'].map((item) => {
-                                return <ProjectCard Project={item}/>
+                                return <ProjectCard Project={item} key={item}/>
                             })
                         }
                     </div>
