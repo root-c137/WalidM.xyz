@@ -13,7 +13,7 @@
         <h2 class="Title">{{ Projet.getTitle() }}</h2>
 
         <div class="PresentationProjet">
-            <a href="{{ Projet.getLink() }}" target="_blank"><img class="Image" src="{{ asset("Imgs/"~Projet.getImage() ) }}" /></a>
+            <a href="{{ Projet.getLink() }}" target="_blank"><img class="Image" src="{{ asset('Imgs/'~ImageDirectory) }}" /></a>
             <p class="Description">{{ Projet.getDescription() }}</p>
 
             <div class="Links">

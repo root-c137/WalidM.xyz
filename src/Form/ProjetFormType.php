@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Projet;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -37,7 +38,7 @@ class ProjetFormType extends AbstractType
                     'class' => 'FormLabel  FormLabelTextarea'
                 ]
             ])
-            ->add('Image', TextType::class, [
+            ->add('Image', FileType::class, [
                 'label' => 'Image',
                 'required' => true,
                 'attr' => [
@@ -80,7 +81,6 @@ class ProjetFormType extends AbstractType
                     'class' => 'FormLabel'
                 ]
             ])
-
             ->add('submit', SubmitType::class, [
                 'label' => 'Ajouter',
                 'attr' => [

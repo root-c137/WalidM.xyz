@@ -4,9 +4,9 @@ const ProjectCard = ({Project}) =>
 {
     let Img;
     if(Project.Category === "Site")
-        Img = require(`../Images/Sites/${Project.Image}`);
-    if(Project.Category == "Appli")
-        Img = require(`../Images/Applis/${Project.Image}`);
+        Img = require(`../../public/Imgs/Sites/${Project.Image}`);
+    if(Project.Category === "Appli")
+        Img = require(`../../public/Imgs/Applis/${Project.Image}`);
 
     return (
     <Fragment>
