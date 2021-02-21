@@ -62,6 +62,8 @@ class ContactController extends AbstractController
 
             $Doc->persist($Contact);
             $Doc->flush();
+
+            $this->addFlash("Notice", "Votre message à bien été envoyé." );
         }
         else
         {
