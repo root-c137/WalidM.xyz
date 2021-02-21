@@ -1,0 +1,28 @@
+
+body
+{
+    background-color: #1c1d21;
+}
+
+.ErrorMain
+{
+    margin:auto;
+    margin-top:10rem;
+    text-align: center;
+    color:#dfdfdf;
+}
+
+.Title
+{
+    font-weight: bold;
+    padding:1rem;
+    font-size:2rem;
+}
+
+.ErrorMain a
+{
+    text-decoration: none;
+    color:#5eb5e0;
+    display: inline-block;
+    margin-top:1rem;
+}
