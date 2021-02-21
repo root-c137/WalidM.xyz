@@ -43,7 +43,7 @@
 
 .FormLabelTextarea
 {
-    transform: translate3d(0, -10.5em, 0) scale(1);
+    transform: translate3d(0, -8.2em, 0) scale(1);
 }
 
 .FormControl
@@ -69,7 +69,7 @@
 .Textarea:focus + .FormLabelTextarea,
 .Textarea:not(:placeholder-shown) + .FormLabelTextarea
 {
-    transform: translate3d(0, -10.5em, 0) scale(0.55);
+    transform: translate3d(0, -8.2em, 0) scale(0.55);
 }
 
 
