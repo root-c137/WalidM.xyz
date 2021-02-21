@@ -10,7 +10,7 @@
 }
 .ProjectCard
 {
-    height:240px;
+    width:100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,12 +54,14 @@
 {
     .ProjectsList
     {
-        width:100%;
+        width:98%;
         flex-direction: column;
     }
     .ProjectCard
     {
         width: 100%;
+        margin:0;
+        margin-bottom: 1rem;
     }
     .Title, .Infos
     {
@@ -86,6 +88,8 @@
     .ProjectCard
     {
         max-width:30%;
+        margin-bottom: 0;
+        margin:0.4rem;
         width:calc(100% / 4);
     }
 
