@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="{{ asset('CSS/Backo/Backo.css') }}"/>
     <link rel="stylesheet" href="{{ asset('CSS/FloatLabel.css') }}"/>
     <link rel="stylesheet" href="{{ asset('CSS/Backo/AddForm.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('CSS/Backo/ProjetAdd.css') }}"/>
     <link rel="stylesheet" href="{{ asset('CSS/NoticeMsg.css') }}"/>
 
 {% endblock %}
@@ -38,9 +39,12 @@
             {{ form_label(Form.Description) }}
         </div>
 
-        <div class="FormGroup">
-            {{ form_widget(Form.Image) }}
+        <div class="FormGroupFile">
+            {% if Projet is defined %}
+            <div class="ee">{{ Projet.Image }}</div>
+            {% endif %}
             {{ form_label(Form.Image) }}
+            {{ form_widget(Form.Image) }}
         </div>
 
         <div class="FormGroup">

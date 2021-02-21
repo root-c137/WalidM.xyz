@@ -40,13 +40,14 @@ class ProjetFormType extends AbstractType
             ])
             ->add('Image', FileType::class, [
                 'label' => 'Image',
-                'required' => true,
+                'required' => false,
+                'mapped' => false,
                 'attr' => [
-                    'class' => 'FormControl',
+                    'class' => 'FileControl',
                     'placeholder' => 'image..'
                 ],
                 'label_attr' => [
-                    'class' => 'FormLabel'
+                    'class' => 'FileLabel'
                 ]
             ])
             ->add('Category', TextType::class, [

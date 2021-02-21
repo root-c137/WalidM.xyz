@@ -1,0 +1,11 @@
+
+.FormGroupFile
+{
+    border:1px solid #dfdfdf;
+    margin-top:-1rem;
+    margin-bottom: 2rem;
+}
+.FileLabel
+{
+    color:gray;
+}

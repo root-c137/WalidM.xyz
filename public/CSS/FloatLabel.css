@@ -60,6 +60,7 @@
     color:transparent;
 }
 
+
 .FormControl:focus + .FormLabel,
 .FormControl:not(:placeholder-shown) + .FormLabel
 {
