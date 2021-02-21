@@ -20,11 +20,7 @@
 
         </section>
 
-
-        <section class="SocialMenu">
-            <a href="{{ app.session.get('LinkLinkedin') }}"><img class="LinkIcon" src="{{ asset('/Imgs/linkedin.png') }}"/></a>
-            <a href="{{ app.session.get('LinkGithub') }}"><img class="GitHubIcon" src="{{ asset('/Imgs/GitHubLight.png') }}"/></a>
-        </section>
+         {% embed 'Partials/SocialMenu.html.twig' %}{% endembed %}
 
         <section class="ContactHeader">
             <ul>
@@ -33,10 +29,26 @@
             </ul>
         </section>
 
-
-
-
     </section>
+
+    <nav role="navigation">
+    <div id="menuToggle">
+
+        <input type="checkbox" />
+
+        <span class="Croix"></span>
+        <span class="Croix"></span>
+        <span class="Croix"></span>
+
+            <ul id="menu">
+                <li>walidm.xyz</li>
+                <li><a href="{{ path('main') }}#top" class="LinkNav">#Présentation</a></li>
+                <li><a href="{{ path('main')}}#experiences" class="LinkNav">#Expériences</a></li>
+                <li><a href="{{ path('main') }}#portfolio" class="LinkNav">#Portfolio</a></li>
+                <li><a href="{{ path('contact') }}" class="LinkNav">#Contact</a></li>
+            </ul>
+    </div>
+    </nav>
 
 
 

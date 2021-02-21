@@ -15,6 +15,8 @@ header
     margin:auto;
     color:#f4f4f2;
     background-color: #1c1d21;
+    position: relative;
+
 }
 
 .Title, .SubTitle
@@ -124,26 +126,53 @@ header
         text-align: center;
     }
 
-    .Menu, .MenuNav
-    {
-        width:100%;
-        font-size:0.6rem;
-    }
     .MenuNav
     {
-        top:7.6rem;
-        font-size:0.5rem;
+        display: none;
     }
+
 }
 
 @media only screen and (min-width: 300px)
 {
     .MenuNav, .ContactHeader
     {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
+    }
+
+    .SocialMenu
+    {
+        margin-top:3rem;
+        z-index: 1;
+    }
+
+    .LinkIcon, .GitHubIcon
+    {
+        width:8.9%;
+    }
+
+    .InfoContact
+    {
+        display: none;
     }
 }
 
+
+@media only screen and (min-width: 400px)
+{
+    .LinkIcon, .GitHubIcon
+    {
+        width:6%;
+    }
+}
+
+@media only screen and (min-width: 600px)
+{
+    .LinkIcon, .GitHubIcon
+    {
+        width:4%;
+    }
+}
 @media only screen and (min-width: 900px)
 {
     .HeaderBarre, .ContactHeader, .ContactHeader ul
@@ -162,6 +191,12 @@ header
     .Left
     {
         flex-direction: column;
+        margin-left:3rem;
+    }
+
+    .LinkIcon, .GitHubIcon
+    {
+        width:8%;
     }
 
     .InfoContact
@@ -171,20 +206,32 @@ header
 
     .MenuNav
     {
-        width:80%;
-        top:6.4em;
+        display: block;
+        width:100%;
+        top:7.4em;
+        padding:0.3rem;
+        font-size:0.7rem;
     }
 
     .MenuNav li
     {
         padding:0.6rem;
     }
+
+    .InfoContact
+    {
+        display: block;
+        font-size:0.66rem;
+    }
 }
 
 @media only screen and (min-width: 1100px)
 {
 
-
+    .LinkIcon, .GitHubIcon
+    {
+        width:6%;
+    }
 
 }
 
@@ -201,9 +248,24 @@ header
 
 @media only screen and (min-width: 1300px)
 {
+
+    .Left
+    {
+        margin-left:0;
+    }
     .MenuNav
     {
-        width:70%;
+        display: block;
+        width:90%;
+        top:7.4em;
+        padding:0.3rem;
+        font-size:0.7rem;
+    }
+
+
+    .LinkIcon, .GitHubIcon
+    {
+        width:5%;
     }
 
 }
@@ -211,10 +273,26 @@ header
 {
     .MenuNav
     {
-        width:50%;
+        width:55%;
     }
 
+
+    .LinkIcon, .GitHubIcon
+    {
+        width:4%;
+    }
 }
+
+@media only screen and (min-width: 1600px)
+{
+
+    .LinkIcon, .GitHubIcon
+    {
+        width:3%;
+    }
+}
+
+
 
 
 
