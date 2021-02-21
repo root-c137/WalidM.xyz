@@ -6,3 +6,67 @@
     margin:auto;
     margin-top:10rem;
 }
+
+.MainLogin form
+{
+    margin-top:3rem;
+}
+
+.BConnexion
+{
+    border:none;
+    outline: none;
+    background-color: #a9294f;
+    color:#fff;
+    padding:0.5rem;
+}
+
+
+@media only screen and (min-width: 150px)
+{
+    .MainLogin
+    {
+        width:100%;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 300px)
+{
+    .MainLogin
+    {
+        width:80%;
+    }
+}
+
+@media only screen and (min-width: 500px)
+{
+    .MainLogin
+    {
+        width:50%;
+    }
+}
+
+@media only screen and (min-width: 700px)
+{
+    .MainLogin
+    {
+        width:40%;
+    }
+}
+
+@media only screen and (min-width: 1100px)
+{
+    .MainLogin
+    {
+        width:30%;
+    }
+}
+
+@media only screen and (min-width: 1400px)
+{
+    .MainLogin
+    {
+        width:20%;
+    }
+}

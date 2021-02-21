@@ -4,14 +4,20 @@
 
 
 {% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('CSS/FloatLabel.css') }}" />
     <link rel="stylesheet" href="{{ asset('CSS/Login.css') }}" />
+    <link rel="stylesheet" href="{{ asset('CSS/FloatLabel.css') }}" />
 {% endblock %}
 
 {% block body %}
 
-<section class="MainLogin">
-    <h3>Connexion</h3>
+<main class="MainLogin">
+
+    {% embed 'Partials/Notice.html.twig' %}{% endembed %}
+    {% embed 'Partials/Error.html.twig' %}{% endembed %}
+
+    <div>
+        <h2>CONNEXION</h2>
+    </div>
 
     <form method="post">
         {% if error %}
@@ -50,10 +56,10 @@
             </div>
         #}
 
-        <button class="btn btn-lg btn-primary" type="submit">
+        <button class="BConnexion" type="submit">
             Connexion
         </button>
     </form>
 
-</section>
+</main>
 {% endblock %}
