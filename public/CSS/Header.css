@@ -28,6 +28,11 @@ header
 {
     padding-top:0.5rem;
 }
+.Title a
+{
+    text-decoration: none;
+    color:#f4f4f2;
+}
 .SubTitle
 {
     font-size: 0.7rem;
