@@ -20,6 +20,8 @@ class PresentationController extends AbstractController
         $RepPresentation = $Doc->getRepository(Presentation::class);
 
         $Presentation = $RepPresentation->find(1);
+        $Presentation->setTexte(str_replace("<br />", "", $Presentation->getTexte() ));
+
         $Form = $this->createForm(PresentationType::class, $Presentation, [
             'method' => 'POST',
             'action' => $this->generateUrl('UpdatePresentation')
@@ -47,7 +49,7 @@ class PresentationController extends AbstractController
             $RepPresentation = $Doc->getRepository(Presentation::class);
             $Presentation = $RepPresentation->find(1);
 
-            $Presentation = $Form->getData();
+            $Presentation->setTexte($Form->get('Texte')->getData() );
             $Presentation->setUpdatedAt(new \DateTime());
 
             $Doc->flush();

@@ -1,18 +1,83 @@
 main
 {
-    width:100%;
+    width: 100%;
     margin:auto;
     margin-top:9rem;
     background-color: #1c1d21;
 }
+.PresentationBackground
+{
+    width: 100%;
+    font-weight: 400;
+    display: block;
+    background-color: #fff;
+    padding:1rem;
+    padding-bottom: 5rem;
+}
+
+
 .Presentation
 {
-    font-weight: 400;
-    text-align:center;
-    line-height: 1.4rem;
-    background-color: #fff;
-    padding-bottom: 9rem;
+    margin:auto;
+    font-size:0.88rem;
 }
+.Presentation .Title
+{
+    font-size:1rem;
+    text-align: center;
+    font-weight: bold;
+    padding:3rem;
+    color:indianred;
+}
+
+.PresentationTxt
+{
+    white-space: pre-wrap;
+}
+
+@media only screen and (min-width: 200px)
+{
+    .Presentation .Titles
+    {
+        font-weight: bold;
+    }
+}
+
+@media only screen and (min-width: 700px)
+{
+    .Presentation
+    {
+        width: 79%;
+    }
+}
+
+@media only screen and (min-width: 1000px)
+{
+    .Presentation
+    {
+        width: 60%;
+    }
+}
+
+
+
+@media only screen and (min-width: 1200px)
+{
+    .Presentation
+    {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1400px)
+{
+    .Presentation
+    {
+        width: 40%;
+    }
+}
+
+
 
 
 

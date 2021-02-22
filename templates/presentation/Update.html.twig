@@ -21,11 +21,10 @@
 
             {{ form_start(Form) }}
 
-            <div class="FormGroupTextarea">
-                {{ form_widget(Form.Texte) }}
+            <div class="FormGroup FormGroupTextarea">
+                {{ form_widget(Form.Texte)}}
                 {{ form_label(Form.Texte) }}
             </div>
-
             {{ form_widget(Form.submit) }}
             {{ form_end(Form) }}
         </section>

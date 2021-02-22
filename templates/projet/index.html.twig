@@ -16,9 +16,11 @@
             <a href="{{ Projet.getLink() }}" target="_blank"><img class="Image" src="{{ asset('Imgs/'~ImageDirectory) }}" /></a>
             <p class="Description">{{ Projet.getDescription() }}</p>
 
-            <div class="Links">
-                  <img class="GitHubIcon" src="{{ asset('Imgs/githubicon.png') }}"/><a class="GithubLink" href="{{ Projet.getGithub() }}">{{ Projet.getGithub() }}</a>
-            </div>
+            {% if not Projet.getGithub() == "..." %}
+                <div class="Links">
+                      <img class="GitHubIcon" src="{{ asset('Imgs/githubicon.png') }}"/><a class="GithubLink" href="{{ Projet.getGithub() }}">{{ Projet.getGithub() }}</a>
+                </div>
+            {% endif %}
         </div>
     </main>
 {% endblock %}

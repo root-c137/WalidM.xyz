@@ -16,8 +16,8 @@
 {% block body %}
 <main>
 
-    <section class="Presentation">
-      <p class="PresentationTxt">{{ Presentation.getTexte()}}</p>
+    <section class="PresentationBackground">
+         {% embed 'Partials/Presentation.html.twig' %}{% endembed %}
     </section>
 
     {#Section CV....#}
