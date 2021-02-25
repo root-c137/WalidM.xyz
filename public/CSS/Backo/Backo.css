@@ -9,6 +9,16 @@
     text-align: center;
 }
 
+.BackoMain a
+{
+    margin:0;
+    font-weight: normal;
+    line-height: 1;
+    display:block;
+    padding:0;
+    font-size:0.8rem;
+}
+
 .Cv, .Portfolio
 {
     display:flex;
