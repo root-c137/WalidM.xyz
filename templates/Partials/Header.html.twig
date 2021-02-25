@@ -31,26 +31,18 @@
 
     </section>
 
-    <nav role="navigation">
-    <div id="menuToggle">
+        <input type="checkbox" id="menu-toggle"/>
+        <label id="trigger" for="menu-toggle"></label>
+        <label id="burger" for="menu-toggle"></label>
 
-        <input type="checkbox" />
-
-        <span class="Croix"></span>
-        <span class="Croix"></span>
-        <span class="Croix"></span>
-
-            <ul id="menu">
-                <li>walidm.xyz</li>
-                <li><a href="{{ path('main') }}#top" class="LinkNav">#Présentation</a></li>
-                <li><a href="{{ path('main')}}#experiences" class="LinkNav">#Expériences</a></li>
-                <li><a href="{{ path('main') }}#portfolio" class="LinkNav">#Portfolio</a></li>
-                <li><a href="{{ path('contact') }}" class="LinkNav">#Contact</a></li>
-            </ul>
-    </div>
-    </nav>
-
-
+         <ul id="menu">
+             <li class="Title">walidm.xyz</li>
+             <li><a href="{{ path('main') }}#top" class="LinkNav TitlePresentation">#Présentation</a></li>
+             <li><a href="{{ path('main')}}#experiences" class="LinkNav TitleXP">#Expériences</a></li>
+             <li><a href="{{ path('main') }}#portfolio" class="LinkNav TitlePortfolio">#Portfolio</a></li>
+             <li><a href="{{ path('contact') }}" class="LinkNav TitleContact">#Contact</a></li>
+        </ul>
 
 </header>
+
 

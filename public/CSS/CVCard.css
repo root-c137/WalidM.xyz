@@ -46,6 +46,12 @@
     font-style: italic;
     padding:0.2rem;
     margin-top:1rem;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.DescriptionPre
+{
+    white-space: pre-wrap;
 }
 
 .Date
@@ -73,9 +79,19 @@
 {
     .CvCard
     {
+        width:calc(100%/2);
+    }
+}
+
+
+@media only screen and (min-width : 700px)
+{
+    .CvCard
+    {
         width:calc(100%/3);
     }
 }
+
 
 @media only screen and (min-width : 800px)
 {
@@ -85,7 +101,8 @@
     }
 }
 
-@media only screen and (min-width : 1200px)
+
+@media only screen and (min-width : 1300px)
 {
     .CvCard
     {
@@ -93,7 +110,8 @@
     }
 }
 
-@media only screen and (min-width : 1300px)
+
+@media only screen and (min-width : 1400px)
 {
     .CvCard
     {

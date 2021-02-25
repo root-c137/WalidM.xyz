@@ -31,6 +31,7 @@ main
 .PresentationTxt
 {
     white-space: pre-wrap;
+    line-height: 0.95rem;
 }
 
 @media only screen and (min-width: 200px)

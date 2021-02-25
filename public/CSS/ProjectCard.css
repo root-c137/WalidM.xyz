@@ -11,24 +11,42 @@
 .ProjectCard
 {
     width:100%;
+    height:260px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-self:flex-end;
     box-shadow: 0 0 1px #ccc;
     margin:auto;
     margin:0.3rem;
     flex-grow:1;
     border-radius:10px;
-    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 5px indianred;
 }
 
+.MenuCard
+{
+    width:100%;
+}
 .ProjectCard .Title, .ProjectCard .Infos
 {
     text-decoration: none;
     color:#212121;
 }
 
+
+.ProjectCard .Infos:hover
+{
+    background-color:#ddd;
+}
+.ProjectCard .Title:hover
+{
+    color:#5eb5e0;
+}
 .ProjectCard .Title
 {
     border-bottom:1px solid #ccc;
@@ -45,7 +63,7 @@
     width:100%;
     text-align: center;
     margin:auto;
-    background-color: #dfdfdf;
+    background-color: #fff;
     padding:0.4rem;
     color:#1c1d21;
 }
@@ -86,10 +104,10 @@
     }
     .ProjectCard
     {
-        max-width:30%;
         margin-bottom: 0;
         margin:0.4rem;
-        width:calc(100% / 4);
+        width:calc(100% / 2);
+        max-width:50%;
     }
 
 }
@@ -103,6 +121,17 @@
         font-size:0.8rem;
     }
 }
+
+@media only screen and (min-width: 800px)
+{
+
+    .ProjectCard
+    {
+        width:calc(100% / 4);
+    }
+}
+
+
 
 
 @media only screen and (min-width: 1400px)
