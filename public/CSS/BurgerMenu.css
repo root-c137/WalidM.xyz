@@ -17,26 +17,26 @@
         height: 3000px;
     }
 }
-li, a {
-    margin: 75px 0 -55px 0;
+
+
+li, a
+{
+    margin: auto;
     color: indianred;
-    font: 14pt "Roboto", sans-serif;
-    font-weight: 700;
     line-height: 1.8;
+    font-size:2rem;
+    padding:1rem;
     text-decoration: none;
     text-transform: none;
     list-style: none;
+    text-align: center;
     outline: 0;
     display: none;
 }
-li {
-    width: 230px;
-    text-indent: 56px;
-}
+
+
 a:focus {
     display: block;
-    color: #333;
-    background-color: #eee;
     transition: all .5s;
 }
 
@@ -46,12 +46,13 @@ a:focus {
     color:#222222;
     text-align: center;
     padding:1rem;
+
 }
 
 #trigger, #burger, #burger:before, #burger:after
 {
     position: absolute;
-    top: 25px;
+    top: 15px;
     right: 10px;
     background: indianred;
     width: 30px;
@@ -99,9 +100,9 @@ a:focus {
 {
     position: absolute;
     margin: 0; padding: 0;
-    width: 80px;
-    height: 80px;
-    right:0px;
+    width: 65px;
+    height: 65px;
+    right:0;
     background-color: #fff;
     border-bottom-left-radius: 100%;
     box-shadow: 0 2px 5px rgba(0,0,0,0.26);
@@ -112,7 +113,7 @@ a:focus {
 #menu-toggle:checked + #trigger + #burger + #menu {
     animation: checked-anim 1s ease both;
 }
-#menu-toggle:checked + #trigger ~ #menu > li, a {
+#menu-toggle:checked + #trigger ~ #menu > li,  a {
     display: block;
 }
 [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
@@ -120,4 +121,11 @@ a:focus {
 }
 
 
-@medi
+@media only screen and (min-width: 1000px)
+{
+    #trigger, #burger, #burger:before, #burger:after, #menu
+    {
+        display: none;
+    }
+}
+
