@@ -26,6 +26,7 @@ header
     font-weight: normal;
     line-height: 1;
     display:block;
+    padding:0;
 }
 
 .HeaderBarre li
@@ -59,6 +60,7 @@ header
 }
 .Title a
 {
+    font-size: 0.9rem;
     color:#f1f2f3;
 }
 
@@ -81,7 +83,7 @@ header
     padding:1rem;
     animation: AnimMenuNav 5.3s;
     background-color: #FFF;
-    top:6.4em;
+    top:5em;
     display: none;
 }
 
