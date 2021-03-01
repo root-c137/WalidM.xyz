@@ -49,7 +49,7 @@ class PortfolioCrudController extends AbstractController
                 }
                 catch(FileException $E)
                 {
-                    dd($E);
+                    $this->addFlash('Err', 'Il y a eu un problème avec le fichier..');
                 }
 
                 $Doc->persist($Projet);

@@ -20,7 +20,7 @@ class ApiController extends AbstractController
         $RepProject = $Doc->getRepository(Projet::class);
 
 
-        $Projects = $RepProject->findBy(['Category' => $Category]);
+        $Projects = $RepProject->findBy(['Category' => $Category], [ 'id' => 'DESC']);
 
         $ProjectsToArray = [];
         foreach($Projects as $Project)

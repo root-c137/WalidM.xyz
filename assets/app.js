@@ -42,8 +42,6 @@ class App extends Component
     //Pour récuperer les projets en fonction de la category...
     fetchApi = () => {
 
-        console.log('FETCH : '+this.state.Category);
-
         fetch("http://localhost:8000/api/"+this.state.Category)
             .then(res => res.json() )
             .then(

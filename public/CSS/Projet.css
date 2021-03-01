@@ -1,7 +1,7 @@
 
 .ProjetMain
 {
-    width:50%;
+    width:100%;
     margin:auto;
     display: flex;
     flex-direction: column;
@@ -19,7 +19,7 @@
 }
 .Image
 {
-    width:90%;
+    width:100%;
     text-align: center;
     box-shadow: 0 0 10px #ccc;
 }
@@ -52,4 +52,28 @@
 .ProjetMain .GitHubIcon
 {
     width:3%;
+}
+
+@media only screen and (min-width: 800px)
+{
+    .Image
+    {
+        width:80%;
+    }
+}
+
+@media only screen and (min-width: 1000px)
+{
+    .Image
+    {
+        width:60%;
+    }
+}
+
+@media only screen and (min-width: 1600px)
+{
+    .Image
+    {
+        width:40%;
+    }
 }

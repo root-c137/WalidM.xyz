@@ -121,7 +121,7 @@ a:focus {
 }
 
 
-@media only screen and (min-width: 1000px)
+@media only screen and (min-width: 1200px)
 {
     #trigger, #burger, #burger:before, #burger:after, #menu
     {
